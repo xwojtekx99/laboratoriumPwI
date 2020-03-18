@@ -1,0 +1,77 @@
+header{
+    background-color: skyblue;
+}
+nav{
+    background-color: olivedrab;
+}
+
+article{
+    background-color: plum;
+    width: 66%;
+}
+
+section{
+    background-color: grey;
+    align-items: center;
+}
+
+aside{
+    background-color: cadetblue;
+    width: 34%;
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    background-color: orange;
+}
+
+nav ul, nav li{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+    width: 33%;
+}
+
+html, body{
+    margin: 0;
+}
+
+a{
+    display: inline-block;
+    width: 100%;
+    align-items: center;
+}
+
+a:hover{
+    color: green;
+    background-color: whitesmoke;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.margin
+{
+    margin: 0;
+    padding: 0;
+}
+
+.background
+{
+    background-color: skyblue;
+}
+.collapse
+{
+    background-color: darkgrey; 
+}
