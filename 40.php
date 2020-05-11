@@ -15,8 +15,7 @@
     
     $connection = new mysqli($host, $db_user, $db_password,$db_name)
     or die('Brak połączenia z serwerem MySQL');
-      
-    // dodajemy rekord do bazy
+    
     $ins = "INSERT INTO studenci values(1, 'Alan', 'Kowalski', 'alanik@wp.pl', 1)";
     $ins1 = "INSERT INTO studenci values(2, 'Marek', 'Nowak', 'nowakM1@wp.pl', 1)";
     $ins2 = "INSERT INTO studenci values(3, 'Wiktor', 'Komor', 'wwwkomor@o2.pl', 2)";
