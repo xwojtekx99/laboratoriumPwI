@@ -11,12 +11,9 @@
     $db_user = "root"; 
     $db_password = "";
     $db_name = "uczelnia";
-        
-    
+   
     $connection = new mysqli($host, $db_user, $db_password,$db_name)
     or die('Brak połączenia z serwerem MySQL');
-      
-    // dodajemy rekord do bazy
     $ins = "UPDATE studenci SET nazwisko='Malinowski' WHERE id='3'";
          
     @$connection->query($ins);
