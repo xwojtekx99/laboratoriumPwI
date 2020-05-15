@@ -12,16 +12,9 @@
     $db_password = "";
     $db_name = "uczelnia";
         
-    
-    $connection = new mysqli($host, $db_user, $db_password,$db_name)
-    or die('Brak połączenia z serwerem MySQL');
+    $dbh = new PDO("mysql:dbname=$db_name;host=$host",$db_user,$db_password);
+    $sql = $dbh->exec("DELETE FROM studenci WHERE id='2'");
       
-    $ins = "DELETE FROM studenci WHERE id='2'";
-         
-    @$connection->query($ins);
-              
-    $connection->close();
-    
 ?>
     
     
