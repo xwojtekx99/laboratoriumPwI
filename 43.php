@@ -13,7 +13,14 @@
     $db_name = "uczelnia";
         
     $dbh = new PDO("mysql:dbname=$db_name;host=$host",$db_user,$db_password);
-    $sql = $dbh->query("SELECT studenci.imie, studenci.nazwisko, rok.kierunek, rok.stopien FROM studenci INNER JOIN rok ON studenci.id_rok_studiow=rok.id;");
+    $sql = "SELECT studenci.imie, studenci.nazwisko, rok.kierunek, rok.stopien FROM studenci INNER JOIN rok ON studenci.id_rok_studiow=rok.id;";
+    foreach ($dbh->query($sql) as $row) {
+    print $row['imie'] . "\t";
+    print $row['nazwisko'] . "\t";
+    print $row['kierunek'] . "\n";
+    print $row['stopien'] . "\n";
+    print("<br>");
+    }
       
 ?>
     
