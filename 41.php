@@ -11,14 +11,9 @@
     $db_user = "root"; 
     $db_password = "";
     $db_name = "uczelnia";
-   
-    $connection = new mysqli($host, $db_user, $db_password,$db_name)
-    or die('Brak połączenia z serwerem MySQL');
-    $ins = "UPDATE studenci SET nazwisko='Malinowski' WHERE id='3'";
-         
-    @$connection->query($ins);
-              
-    $connection->close();
+                
+    $dbh = new PDO("mysql:dbname=$db_name;host=$host",$db_user,$db_password);
+    $sql = $dbh->exec("UPDATE studenci SET nazwisko='Malinowski' WHERE id='3'");
     
 ?>
     
