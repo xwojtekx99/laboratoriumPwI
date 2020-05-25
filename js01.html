@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zad1</title>
+</head>
+<body>
+<h2>Kalkulator</h2>
+    <form>
+    <input type="number" id="a"><br><br>
+    <input type="number" id="b"><br><br>
+    
+    Suma: <output id="suma"></output>
+    <br>
+    Różnica: <output id="roznica"></output>
+    <br>
+    Iloczyn: <output id="iloczyn"></output>
+    <br>
+    Iloraz: <output id="iloraz"></output>
+    <br>
+    <button type="button" id="ok">OK</button>
+</form>
+<script>
+    var button = document.querySelector("#ok");
+    button.addEventListener("click", () => {
+        var a1 = document.querySelector("#a");
+        var b1 = document.querySelector("#b");
+        var suma = document.querySelector("#suma");
+        var roznica = document.querySelector("#roznica");
+        var iloczyn = document.querySelector("#iloczyn");
+        var iloraz = document.querySelector("#iloraz");
+        var a = parseInt(a1.value);
+        var b = parseInt(b1.value);
+        suma.value = a + b;
+        roznica.value = a - b;
+        iloczyn.value = a * b;
+        if (b != 0) {
+            iloraz.value = a / b;
+        } else {
+            alert("Błąd dzielenia przez 0!");
+        }
+    })
+</script>
+</body>
+</html>

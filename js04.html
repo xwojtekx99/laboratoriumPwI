@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <meta charset="UTF-8">
+    <title>Zad4</title>
+</head>
+<body>
+<div id="komunikat">
+    To jest tekst!
+</div>
+<a href="#" id="schowaj">Schowaj</a><br>
+<a href="#" id="pokaz">Pokaz</a>
+<script>
+    $( "#schowaj" ).click(function() {
+        $("#komunikat").slideUp(5000, () => {})
+    });
+    $( "#pokaz" ).click(function() {
+        $("#komunikat").slideDown(5000, () => {})
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Zad3</title>
+</head>
+<body>
+<h2>Kalkulator</h2>
+    <form>
+    <input type="number" id="a"><br><br>
+    <input type="number" id="b"><br><br>
+    Suma: <output id="suma"></output><br>
+    Różnica: <output id="roznica"></output><br>
+    Iloczyn: <output id="iloczyn"></output><br>
+    Iloraz: <output id="iloraz"></output><br>
+    <button type="button" id="ok">OK</button>
+</form>
+<script>
+    var button = $("#ok");
+    button.click(() => {
+        var a1 = $("#a");
+        var b1 = $("#b");
+        var suma = $("#suma");
+        var roznica = $("#roznica");
+        var iloczyn = $("#iloczyn");
+        var iloraz = $("#iloraz");
+        var a = parseInt(a1.val());
+        var b = parseInt(b1.val());
+        suma.val(a + b);
+        roznica.val(a - b);
+        iloczyn.val(a * b);
+        if (b != 0) {
+            iloraz.val(a / b);
+        } else {
+            alert("Błąd dzielenia przez 0!");
+        }
+    })
+</script>
+</body>
+</html>
